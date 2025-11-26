@@ -1,0 +1,7 @@
+numpy
+pandas
+requests
+pytest
+flake8
+matplotlib
+ruff
