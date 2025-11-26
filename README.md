@@ -1,35 +1,42 @@
-# Transformers Project (minimal skeleton)
 
-This repository has been initialized with a minimal skeleton.
+# Transformers — Vision Transformers research & experiments
 
-Files added:
+This repository is a minimal scaffold for working on Vision Transformer (ViT)
+research, experiments, and utilities.
 
-- `.gitignore` — sensible ignores for common environments
-- `.gitkeep` — placeholder to keep the repo directory tracked while empty
+Quick layout
 
-Next steps:
+- `src/transformers/` — Python package source
+- `tests/` — unit tests
+- `examples/` — runnable example scripts (see `examples/demo_vit.py`)
+- `requirements-ml.txt` — optional heavy ML dependencies (torch, timm)
 
-- Add your project files (source code, tests, docs).
-- If you want a specific scaffold (Python package, Node app, VS Code extension), tell me and I can add it.
+Getting started (fast)
 
-To get started locally:
+1. Create a virtualenv and install light dependencies:
 
 ```bash
-# clone the repo (if not already), then add files and commit
-git status
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install -e .
 ```
 
-# Transformers Project (minimal skeleton)
+2. Run the smoke test (quick):
 
-This repository contains a minimal skeleton to keep the project tracked while empty.
+```bash
+pytest -q
+```
 
-Included files:
+3. To run Vision Transformer demos and experiments, install ML deps:
 
-- `README.md` — this file
-- `.gitignore` — common ignores
-- `.gitkeep` — placeholder so the empty directory remains in git
+```bash
+pip install -r requirements-ml.txt
+python examples/demo_vit.py
+```
 
-Next steps:
+Project status
 
-- Add your project files (source code, tests, docs) and commit.
-- If you want a specific scaffold (Python package, Node app, VS Code extension), tell me and I can add it.
+This is an initial scaffold. Next steps may include adding dataset utilities, training scripts, model evaluation, and experiment tracking.
+
